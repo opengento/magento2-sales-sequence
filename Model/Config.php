@@ -29,7 +29,7 @@ class Config
         private DefaultConfig $defaultConfig
     ) {}
 
-    public function getPattern(string $entityType, int $storeId)
+    public function getPattern(string $entityType, int $storeId): string
     {
         return $this->fetch(self::CONFIG_PATH_PATTERN, $entityType, $storeId) ?? Sequence::DEFAULT_PATTERN;
     }
@@ -46,25 +46,25 @@ class Config
 
     public function getStartValue(string $entityType, int|string|null $store = null): int
     {
-        return $this->fetch(self::CONFIG_PATH_START_VALUE, $entityType, $store) ?? $this->defaultConfig->get('startValue');
+        return (int)($this->fetch(self::CONFIG_PATH_START_VALUE, $entityType, $store) ?? $this->defaultConfig->get('startValue'));
     }
 
     public function getStep(string $entityType, int|string|null $store = null): int
     {
-        return $this->fetch(self::CONFIG_PATH_STEP, $entityType, $store) ?? $this->defaultConfig->get('step');
+        return (int)($this->fetch(self::CONFIG_PATH_STEP, $entityType, $store) ?? $this->defaultConfig->get('step'));
     }
 
     public function getWarningValue(string $entityType, int|string|null $store = null): int
     {
-        return $this->fetch(self::CONFIG_PATH_WARNING_VALUE, $entityType, $store) ?? $this->defaultConfig->get('warningValue');
+        return (int)($this->fetch(self::CONFIG_PATH_WARNING_VALUE, $entityType, $store) ?? $this->defaultConfig->get('warningValue'));
     }
 
     public function getMaxValue(string $entityType, int|string|null $store = null): int
     {
-        return $this->fetch(self::CONFIG_PATH_MAX_VALUE, $entityType, $store) ?? $this->defaultConfig->get('maxValue');
+        return (int)($this->fetch(self::CONFIG_PATH_MAX_VALUE, $entityType, $store) ?? $this->defaultConfig->get('maxValue'));
     }
 
-    private function fetch(string $path, string $entityType, int|string|null $store = null): mixed
+    private function fetch(string $path, string $entityType, int|string|null $store = null): ?string
     {
         return $this->scopeConfig->getValue(sprintf($path, $entityType), ScopeInterface::SCOPE_STORE, $store);
     }
