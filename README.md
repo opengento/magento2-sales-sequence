@@ -50,6 +50,10 @@ Setup the following sales sequence settings by entity types (order, invoice, cre
 - Warning Value
 - Max Value
 
+This module is an alternative to this package: https://github.com/karliuka/m2.SalesSequence.  
+The main difference is that faonni/module-sales-sequence allows to manage sales sequences profile as an entity, whereas 
+our module achieve it via settings you can edit from the scoped configuration.  
+
 ## Documentation
 
 - The sequence profiles and meta are updated at every recurring setup, config update, new or deleted store.
