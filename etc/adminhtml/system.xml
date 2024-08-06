@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sales_sequence" translate="label" sortOrder="303" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Sales Sequence</label>
+            <tab>sales</tab>
+            <resource>Opengento_SalesSequence::config_sales_sequence</resource>
+            <group id="order" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Order Sequence</label>
+                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pattern</label>
+                </field>
+                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Start Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="step" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Step</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="warning_value" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Warning Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="max_value" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+            </group>
+            <group id="invoice" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Invoice Sequence</label>
+                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pattern</label>
+                </field>
+                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Start Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="step" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Step</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="warning_value" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Warning Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="max_value" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+            </group>
+            <group id="creditmemo" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>CreditMemo Sequence</label>
+                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pattern</label>
+                </field>
+                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Start Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="step" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Step</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="warning_value" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Warning Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="max_value" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+            </group>
+            <group id="shipment" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Shipment Sequence</label>
+                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pattern</label>
+                </field>
+                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
+                    <validate>validate-alphanum</validate>
+                </field>
+                <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Start Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="step" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Step</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="warning_value" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Warning Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+                <field id="max_value" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Value</label>
+                    <validate>required-number validate-number validate-greater-than-zero</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="store_add">
+        <observer name="magento_sequence" disabled="true"/>
+        <observer name="Opengento_SalesSequence::create_sequence" instance="Opengento\SalesSequence\Observer\SequenceCreatorObserver"/>
+    </event>
+    <event name="admin_system_config_changed_section_sales_sequence">
+        <observer name="Opengento_SalesSequence::update_sequence" instance="Opengento\SalesSequence\Observer\SequenceUpdaterObserver"/>
+    </event>
+</config>
