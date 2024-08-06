@@ -24,7 +24,7 @@ class SequenceCreatorObserver implements ObserverInterface
     {
         $store = $observer->getData('store');
         if ($store instanceof StoreInterface) {
-            $this->sequenceManagement->createOrUpdate((int)$store->getId());
+            $this->sequenceManagement->create((int)$store->getId());
         }
     }
 }

@@ -27,7 +27,7 @@ class RecurringData implements InstallDataInterface
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context): void
     {
         foreach ($this->storeRepository->getList() as $store) {
-            $this->sequenceManagement->createOrUpdate((int)$store->getId());
+            $this->sequenceManagement->create((int)$store->getId());
         }
     }
 }

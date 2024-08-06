@@ -110,7 +110,7 @@
                 <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
                     <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
-                </field>F
+                </field>
                 <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Suffix</label>
                     <validate>validate-alphanum</validate>

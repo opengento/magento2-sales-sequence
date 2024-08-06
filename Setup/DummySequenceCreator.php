@@ -7,7 +7,9 @@ declare(strict_types=1);
 
 namespace Opengento\SalesSequence\Setup;
 
-class DummySequenceCreator
+use Magento\SalesSequence\Setup\SequenceCreator;
+
+class DummySequenceCreator extends SequenceCreator
 {
     public function create(): void {}
 }

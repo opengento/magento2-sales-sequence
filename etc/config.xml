@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © OpenGento, All rights reserved.
+ * See LICENSE bundled with this library for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sales_sequence>
+            <order>
+                <pattern>%s%'.09d%s</pattern>
+                <start_value>1</start_value>
+                <step>1</step>
+                <warning_value>4294966295</warning_value>
+                <max_value>4294967295</max_value>
+            </order>
+            <invoice>
+                <pattern>%s%'.09d%s</pattern>
+                <start_value>1</start_value>
+                <step>1</step>
+                <warning_value>4294966295</warning_value>
+                <max_value>4294967295</max_value>
+            </invoice>
+            <creditmemo>
+                <pattern>%s%'.09d%s</pattern>
+                <start_value>1</start_value>
+                <step>1</step>
+                <warning_value>4294966295</warning_value>
+                <max_value>4294967295</max_value>
+            </creditmemo>
+            <shipment>
+                <pattern>%s%'.09d%s</pattern>
+                <start_value>1</start_value>
+                <step>1</step>
+                <warning_value>4294966295</warning_value>
+                <max_value>4294967295</max_value>
+            </shipment>
+        </sales_sequence>
+    </default>
+</config>
