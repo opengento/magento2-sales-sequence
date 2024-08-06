@@ -14,8 +14,9 @@
             <resource>Opengento_SalesSequence::config_sales_sequence</resource>
             <group id="order" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Order Sequence</label>
-                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
+                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
                 </field>
                 <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Suffix</label>
@@ -44,8 +45,9 @@
             </group>
             <group id="invoice" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Invoice Sequence</label>
-                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
+                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
                 </field>
                 <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Suffix</label>
@@ -74,8 +76,9 @@
             </group>
             <group id="creditmemo" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>CreditMemo Sequence</label>
-                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
+                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
                 </field>
                 <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Suffix</label>
@@ -104,9 +107,10 @@
             </group>
             <group id="shipment" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Shipment Sequence</label>
-                <field id="pattern" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
-                </field>
+                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
+                </field>F
                 <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Suffix</label>
                     <validate>validate-alphanum</validate>
