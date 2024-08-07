@@ -31,7 +31,7 @@ class SequenceUpdaterObserver implements ObserverInterface
     {
         $storeCode = (string)$observer->getData('store');
         if ($storeCode !== '') {
-            $this->sequenceManagement->update((int)$this->storeManager->getStore($storeCode)->getId());
+            $this->sequenceManagement->createOrUpdate((int)$this->storeManager->getStore($storeCode)->getId());
         }
     }
 }

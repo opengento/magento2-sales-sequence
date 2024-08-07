@@ -8,6 +8,8 @@ declare(strict_types=1);
 namespace Opengento\SalesSequence\Setup;
 
 use Magento\Framework\Exception\AlreadyExistsException;
+use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
@@ -23,11 +25,13 @@ class RecurringData implements InstallDataInterface
 
     /**
      * @throws AlreadyExistsException
+     * @throws NoSuchEntityException
+     * @throws LocalizedException
      */
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context): void
     {
         foreach ($this->storeRepository->getList() as $store) {
-            $this->sequenceManagement->create((int)$store->getId());
+            $this->sequenceManagement->createOrUpdate((int)$store->getId());
         }
     }
 }
