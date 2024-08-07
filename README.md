@@ -42,7 +42,7 @@ bin/magento setup:upgrade
 ## Features
 
 Setup the following sales sequence settings by entity types (order, invoice, creditmemo, shipment):
-- Patter
+- Pattern
 - Suffix
 - Prefix
 - Start Value
