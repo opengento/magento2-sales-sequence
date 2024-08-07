@@ -12,6 +12,7 @@ use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\SalesSequence\Model\Builder;
 use Magento\SalesSequence\Model\EntityPool;
+use Magento\SalesSequence\Model\Profile;
 use Magento\SalesSequence\Model\ResourceModel\Meta as MetaResource;
 use Opengento\SalesSequence\Model\Config;
 
@@ -64,18 +65,22 @@ class SequenceManagement
     private function update(string $entityType, int $storeId): void
     {
         $meta = $this->metaResource->loadByEntityTypeAndStore($entityType, $storeId);
-        if (!$meta->getEntityId()) {
+        if (!$meta->getData('meta_id')) {
             throw NoSuchEntityException::doubleField('entity_type', $entityType, 'store_id', $storeId);
         }
+        $activeProfile = $meta->getData('active_profile');
+        if ($activeProfile instanceof Profile) {
+            $meta->setHasDataChanges(true);
+            $activeProfile->addData([
+                'prefix' => $this->config->getPrefix($entityType, $storeId),
+                'suffix' => $this->config->getSuffix($entityType, $storeId),
+                'start_value' => $this->config->getStartValue($entityType, $storeId),
+                'step' => $this->config->getStep($entityType, $storeId),
+                'warning_value' => $this->config->getWarningValue($entityType, $storeId),
+                'max_value' => $this->config->getMaxValue($entityType, $storeId)
+            ]);
+        }
 
-        $meta->addData([
-            'prefix' => $this->config->getPrefix($entityType, $storeId),
-            'suffix' => $this->config->getSuffix($entityType, $storeId),
-            'start_value' => $this->config->getStartValue($entityType, $storeId),
-            'step' => $this->config->getStep($entityType, $storeId),
-            'warning_value' => $this->config->getWarningValue($entityType, $storeId),
-            'max_value' => $this->config->getMaxValue($entityType, $storeId)
-        ]);
         $this->metaResource->save($meta);
     }
 }
