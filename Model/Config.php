@@ -29,9 +29,9 @@ class Config
         private DefaultConfig $defaultConfig
     ) {}
 
-    public function getPattern(string $entityType, int $storeId): string
+    public function getPattern(string $entityType, int|string|null $store = null): string
     {
-        return $this->fetch(self::CONFIG_PATH_PATTERN, $entityType, $storeId) ?? Sequence::DEFAULT_PATTERN;
+        return $this->fetch(self::CONFIG_PATH_PATTERN, $entityType, $store) ?? Sequence::DEFAULT_PATTERN;
     }
 
     public function getPrefix(string $entityType, int|string|null $store = null): string
