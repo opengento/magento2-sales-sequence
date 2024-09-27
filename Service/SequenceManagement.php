@@ -79,6 +79,18 @@ class SequenceManagement
                 'warning_value' => $this->config->getWarningValue($entityType, $storeId),
                 'max_value' => $this->config->getMaxValue($entityType, $storeId)
             ]);
+            $startValue = (int)$activeProfile->getData('start_value');
+            if ((int)$activeProfile->getOrigData('start_value') !== $startValue) {
+                $sequenceTable = $meta->getData('sequence_table');
+                $connection = $this->metaResource->getConnection();
+                $connection->query(
+                    sprintf(
+                        'ALTER TABLE %s AUTO_INCREMENT = %s;',
+                        $connection->getTableName($sequenceTable),
+                        $connection->quote($startValue)
+                    )
+                );
+            }
         }
 
         $this->metaResource->save($meta);
