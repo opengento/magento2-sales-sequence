@@ -9,28 +9,28 @@
     <default>
         <sales_sequence>
             <order>
-                <pattern>%s%'.09d%s</pattern>
+                <pattern>%1$s%2$'.09d%3$s</pattern>
                 <start_value>1</start_value>
                 <step>1</step>
                 <warning_value>4294966295</warning_value>
                 <max_value>4294967295</max_value>
             </order>
             <invoice>
-                <pattern>%s%'.09d%s</pattern>
+                <pattern>%1$s%2$'.09d%3$s</pattern>
                 <start_value>1</start_value>
                 <step>1</step>
                 <warning_value>4294966295</warning_value>
                 <max_value>4294967295</max_value>
             </invoice>
             <creditmemo>
-                <pattern>%s%'.09d%s</pattern>
+                <pattern>%1$s%2$'.09d%3$s</pattern>
                 <start_value>1</start_value>
                 <step>1</step>
                 <warning_value>4294966295</warning_value>
                 <max_value>4294967295</max_value>
             </creditmemo>
             <shipment>
-                <pattern>%s%'.09d%s</pattern>
+                <pattern>%1$s%2$'.09d%3$s</pattern>
                 <start_value>1</start_value>
                 <step>1</step>
                 <warning_value>4294966295</warning_value>

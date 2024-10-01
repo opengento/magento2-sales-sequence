@@ -16,14 +16,14 @@
                 <label>Order Sequence</label>
                 <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
-                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
+                    <comment><![CDATA[The pattern must contain 4 placeholders, prefix (1$), value (2$), suffix (3$), store ID (3$) which is optional. E.g: <code>%1$s%2$'.09d%3$s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
                 </field>
-                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Suffix</label>
+                <field id="prefix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
                     <validate>validate-alphanum</validate>
                 </field>
-                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Prefix</label>
+                <field id="suffix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
                     <validate>validate-alphanum</validate>
                 </field>
                 <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -47,14 +47,14 @@
                 <label>Invoice Sequence</label>
                 <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
-                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
+                    <comment><![CDATA[The pattern must contain 4 placeholders, prefix (1$), value (2$), suffix (3$), store ID (3$) which is optional. E.g: <code>%1$s%2$'.09d%3$s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
                 </field>
-                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Suffix</label>
+                <field id="prefix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
                     <validate>validate-alphanum</validate>
                 </field>
-                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Prefix</label>
+                <field id="suffix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
                     <validate>validate-alphanum</validate>
                 </field>
                 <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -78,14 +78,14 @@
                 <label>CreditMemo Sequence</label>
                 <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
-                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
+                    <comment><![CDATA[The pattern must contain 4 placeholders, prefix (1$), value (2$), suffix (3$), store ID (3$) which is optional. E.g: <code>%1$s%2$'.09d%3$s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
                 </field>
-                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Suffix</label>
+                <field id="prefix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
                     <validate>validate-alphanum</validate>
                 </field>
-                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Prefix</label>
+                <field id="suffix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
                     <validate>validate-alphanum</validate>
                 </field>
                 <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -109,14 +109,14 @@
                 <label>Shipment Sequence</label>
                 <field id="pattern" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pattern</label>
-                    <comment><![CDATA[The pattern must contain 3 placeholders, suffix, value, prefix. E.g: <code>%s%'.09d%s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
+                    <comment><![CDATA[The pattern must contain 4 placeholders, prefix (1$), value (2$), suffix (3$), store ID (3$) which is optional. E.g: <code>%1$s%2$'.09d%3$s</code>. <a href="https://www.php.net/manual/en/function.sprintf.php" target="_blank" rel="noopener noreferrer">Learn more</a> about valid syntax.]]></comment>
                 </field>
-                <field id="suffix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Suffix</label>
+                <field id="prefix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
                     <validate>validate-alphanum</validate>
                 </field>
-                <field id="prefix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Prefix</label>
+                <field id="suffix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Suffix</label>
                     <validate>validate-alphanum</validate>
                 </field>
                 <field id="start_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">

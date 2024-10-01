@@ -45,6 +45,7 @@ Setup the following sales sequence settings by entity types (order, invoice, cre
 - Pattern
 - Suffix
 - Prefix
+- Add Store ID
 - Start Value
 - Step
 - Warning Value
@@ -53,6 +54,8 @@ Setup the following sales sequence settings by entity types (order, invoice, cre
 This module is an alternative to this package: https://github.com/karliuka/m2.SalesSequence.  
 The main difference is that faonni/module-sales-sequence allows to manage sales sequences profile as an entity, whereas 
 our module achieve it via settings you can edit from the scoped configuration.  
+
+If you enable the store ID, it will be added a the fourth argument in the pattern. We recommend you to use the numered argument syntax (%4$s) in order to the position of your choice in the pattern.  
 
 ## Documentation
 

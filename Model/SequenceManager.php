@@ -7,29 +7,26 @@ declare(strict_types=1);
 
 namespace Opengento\SalesSequence\Model;
 
+use Magento\Framework\DB\Sequence\SequenceInterface;
 use Magento\SalesSequence\Model\Manager;
 use Magento\SalesSequence\Model\ResourceModel\Meta as MetaResource;
-use Magento\SalesSequence\Model\Sequence;
-use Magento\SalesSequence\Model\SequenceFactory;
 
 class SequenceManager extends Manager
 {
     public function __construct(
+        private Config $config,
         private MetaResource $metaResource,
-        private SequenceFactory $factory,
-        private Config $config
+        private SequenceFactory $sequenceFactory
     ) {}
 
-    public function getSequence($entityType, $storeId): Sequence
+    public function getSequence($entityType, $storeId): SequenceInterface
     {
-        return $this->factory->create(
-            [
-                'meta' => $this->metaResource->loadByEntityTypeAndStore(
-                    (string)$entityType,
-                    (int)$storeId
-                ),
-                'pattern' => $this->config->getPattern($entityType, $storeId)
-            ]
-        );
+        $storeId = (int)$storeId;
+        $entityType = (string)$entityType;
+
+        return  $this->sequenceFactory->create([
+            'meta' => $this->metaResource->loadByEntityTypeAndStore($entityType, $storeId),
+            'pattern' => $this->config->getPattern($entityType, $storeId)
+        ]);
     }
 }
