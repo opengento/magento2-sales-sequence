@@ -16,7 +16,7 @@ class SequenceManager extends Manager
     public function __construct(
         private Config $config,
         private MetaResource $metaResource,
-        private SequenceFactory $sequenceFactory
+        private SequenceFactory $factory
     ) {}
 
     public function getSequence($entityType, $storeId): SequenceInterface
@@ -24,7 +24,7 @@ class SequenceManager extends Manager
         $storeId = (int)$storeId;
         $entityType = (string)$entityType;
 
-        return  $this->sequenceFactory->create([
+        return  $this->factory->create([
             'meta' => $this->metaResource->loadByEntityTypeAndStore($entityType, $storeId),
             'pattern' => $this->config->getPattern($entityType, $storeId)
         ]);
