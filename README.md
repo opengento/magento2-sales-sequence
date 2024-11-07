@@ -17,6 +17,11 @@ This module allows to setup the sales sequence settings directly withing the con
  - [Authors](#authors)
  - [License](#license)
 
+## Disclaimer
+
+**Please note that if you install this module, the existing sequence profiles will be update with the configuration set from this module.**  
+**If you aim to deploy this module in production, please ensure that you have setup configuration matching your existing sequence profiles, unless you want to update them.**
+
 ## Setup
 
 Magento 2 Open Source or Commerce edition is required.
